@@ -33,24 +33,34 @@
 
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <div class="container">
-        <a href="#" class="nav__link"><img src="img/logo-color.svg" alt="img"></a>
-        <ul class="nav__list">
-          <li class="nav__list-item">Прайс лист</li>
-          <li class="nav__list-item">Формат</li>
-          <li class="nav__list-item">Мапа</li>
-          <li class="nav__list-item"><a href="tel:+380736429060">+38 (073) 642 90 60 </a> </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <nav class="nav">
+    <div class="container">
+      <a href="#" class="nav__link"><img src="img/logo-color.svg" alt="img"></a>
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="#">Прайс лист</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#">Формат</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#">Мапа</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="tel:+380736429060">+38 (073) 642 90 60 </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <section class="promo">
-    <h1 class="promo__title">Реклама в ліфтах міста Коломия</h1>
-    <div class="promo__descr">Залучайте нових клієнтів за допомогою реклами в 50 ліфтах,
-      що знаходяться у всіх спальних районах</div>
-    <button class="btn">Замовити</button>
+    <div class="promo_darken">
+      <div class="container">
+        <h1 class="title promo__title promo_mt100">Реклама в ліфтах міста Коломия</h1>
+        <div class="promo__descr">Залучайте нових клієнтів за допомогою реклами в 50 ліфтах,
+          що знаходяться у всіх спальних районах</div>
+        <a href="#" class="btn btn_mt25">Замовити</a>
+      </div>
+    </div>
   </section>
   <section class="benefits">
     <h2 class="title">Переваги реклами в ліфтах</h2>
@@ -94,6 +104,21 @@
           <h3 class="business__card-title">Заклади харчування та доставка</h3>
           <div class="business__card-descr">Ресторани, паби, бари, кафе, кальян-бари. Доставка суші та піцци.</div>
         </div>
+        <div class="business__card">
+          <img src="img/whom/01.jpg" alt="business-01">
+          <h3 class="business__card-title">Заклади харчування та доставка</h3>
+          <div class="business__card-descr">Ресторани, паби, бари, кафе, кальян-бари. Доставка суші та піцци.</div>
+        </div>
+        <div class="business__card">
+          <img src="img/whom/01.jpg" alt="business-01">
+          <h3 class="business__card-title">Заклади харчування та доставка</h3>
+          <div class="business__card-descr">Ресторани, паби, бари, кафе, кальян-бари. Доставка суші та піцци.</div>
+        </div>
+                <div class="business__card">
+          <img src="img/whom/01.jpg" alt="business-01">
+          <h3 class="business__card-title">Заклади харчування та доставка</h3>
+          <div class="business__card-descr">Ресторани, паби, бари, кафе, кальян-бари. Доставка суші та піцци.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -117,7 +142,7 @@
     </div>
   </section>
   <section class="price">
-    <h2 class="title title-white">Прайс-лист</h2>
+    <h2 class="title price__title">Прайс-лист</h2>
     <div class="container">
       <div class="price__wrapper">
         <div class="price__column">
@@ -149,14 +174,14 @@
         <div class="footer__promo">
           <img src="img/logo-white.svg" alt="logo-white">
           <div class="footer__promo-descr">Рушійна сила вашого бізнесу</div>
-          <button class="btn">замовити</button>
+          <a href="#" class="btn footer__promo-btn">замовити</a>
         </div>
         <div class="footer__links">
           <div class="footer__links-title">ПОСИЛАННЯ:</div>
-          <a class="footer__links-item">Мапа</a>
+          <a href="#" class="footer__links-item">Мапа</a>
         </div>
         <div class="footer__contacts">
-          <h3 class="footer__contacts-title">КОНТАКТИ:</h3>
+          <div class="footer__contacts-title">КОНТАКТИ:</div>
           <div class="footer__contacts-item">
             тел.:<a href="tel:380736429060"> +380 73 642 9060</a>
           </div>
@@ -164,10 +189,10 @@
         </div>
       </div>
     </div>
-    <div class="license-polici">© 2020 Всі права захищені</div>
+    <div class="private-policy">© 2020 Всі права захищені</div>
   </footer>
 
-  <div class="modal" data-modal>
+  <div class="modal hide" data-modal>
     <form action="">
       <div class="modal__dialog">
         <div class="modal__content">
@@ -177,20 +202,20 @@
           </div>
           <div class="modal__body">
             <div class="modal__body-content">Ми з вами зв'яжемося для уточнення всіх деталей</div>
-            <input type="text" name="user_name" id="name">
             <label for="name">Прізвище та Ім'я</label>
-
-            <input type="tel" name="user_phone" id="phone" placeholder="+380">
+            <input type="text" name="user_name" id="name">
+            
             <label for="phone">Номер телефону з кодом країни</label>
-
-            <input type="email" name="user_email" id="email">
+            <input type="tel" name="user_phone" id="phone" placeholder="+380">
+            
             <label for="email">Електронна адреса</label>
+            <input type="email" name="user_email" id="email">
 
-            <textarea name="user_text" id="text"></textarea>
             <label for="text">Період замовлення та побажання</label>
+            <textarea name="user_text" id="text"></textarea>
           </div>
           <div class="modal__footer">
-            <button type="submit" class="btn">замовити</button>
+            <button type="submit" class="btn modal__btn">замовити</button>
           </div>
         </div>
       </div>

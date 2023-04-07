@@ -1,0 +1,50 @@
+.footer
+    background-color: $main-color
+    padding: 40px 0 0 0
+    color: #fff
+    &__wrapper
+        display: grid
+        grid-template-columns: 2fr 1fr 1fr
+        grid-template-rows: 1fr
+    &__promo
+        display: flex
+        flex-direction: column
+        img
+            max-width: 110px
+        &-descr
+            margin-top: 10px
+            color: #fff
+        &-btn
+            margin: 20px 0 0 0
+    &__links
+        &-title
+            font-size: 1.25rem
+            text-transform: uppercase
+            margin-bottom: 1rem
+            font-weight: 700
+        &-item
+            color: #fff
+            text-decoration: none
+            transition: all 0.3s
+            &:hover
+                color: $footer-link-hover
+    &__contacts
+        &-title
+            font-size: 1.25rem
+            text-transform: uppercase
+            margin-bottom: 1rem
+            font-weight: 700
+        &-item
+            text-decoration: none
+            margin-bottom: 1rem
+            a
+                color: #fff
+                transition: all 0.3s
+                &:hover
+                    color: $footer-link-hover
+    .private-policy
+        margin-top: 30px
+        display: block
+        text-align: center
+        background-color: rgba(0, 0, 0, 0.2)
+        padding: 18px 0

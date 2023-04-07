@@ -1,11 +1,15 @@
 .nav
     background-color: #fff
+    padding: 10px 0
     .container
         display: flex
         justify-content: space-between
+        align-content: center
+        height: 50px
     &__link
         img
-            width: 130px
+            height: 100%
+            width: 100%
     &__list
         display: flex
         flex-direction: row
@@ -13,4 +17,10 @@
         list-style: none
         &-item
             margin: 0 20px
+            a
+                color: rgba(0,0,0,.55)
+                text-decoration: none
+                transition: all 0.5s
+                &:hover
+                    color: #000
 
