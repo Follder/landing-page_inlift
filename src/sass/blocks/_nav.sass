@@ -2,6 +2,7 @@
     background-color: #fff
     padding: 10px 0
     .container
+        position: relative
         display: flex
         justify-content: space-between
         align-content: center
@@ -23,4 +24,64 @@
                 transition: all 0.5s
                 &:hover
                     color: #000
+    &__list-mobile
+        position: absolute
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-content: center
+        list-style: none
+        padding: 25px 0
+        text-align: center
+        width: calc(100% - 20px)
+        background-color: #fff
+        z-index: 1
+        margin: 59px auto 0 auto
+        transition: all .5s
+        transform: translateY(calc(-100% - 60px))
+        opacity: 0
+        &-item
+            padding: 15px 0
+            a
+                text-decoration: none
+                color: $header-color
+        &_active
+            transition: all .5s
+            transform: translateY(0%)
+            opacity: 1
+
+    .burger
+        position: absolute
+        top: 20px
+        right: 25px
+        display: none
+        cursor: pointer
+        &__line
+            width: 25px
+            height: 2px
+            background-color: $header-color
+            transition: all .5s
+            &_first
+                margin-bottom: 4px
+            &_third
+                margin-top: 4px
+        &_active
+            cursor: pointer
+            .burger__line_first
+                margin-top: 4px
+                transition: all .5s
+                transform: rotate(45deg)
+            .burger__line_second
+                margin-top: -5px
+                transition: all .5s
+                transform: rotate(-45deg)
+            .burger__line_third
+                transition: all .5s
+                display: none
+
+@media (max-width: 767px)
+    .nav__list
+        display: none
+    .nav .burger
+        display: block
 

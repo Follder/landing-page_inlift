@@ -2,12 +2,13 @@
     padding: 40px 0
     &__wrapper
         display: grid
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
         grid-template-rows: 1fr
         gap: 50px
         justify-content: center
     &__image
-        width: 450px
+        margin-top: 15px
+        min-width: 325px
         justify-self: end
     &__text
         font-weight: 600
@@ -15,3 +16,13 @@
         color: $header-color
         div
             margin-top: 15px
+
+@media (max-width: 767px)
+    .format
+        &__wrapper
+            grid-template-columns: 1fr
+            gap: 10px
+        &__image
+            justify-self: center
+        &__text
+            text-align: center

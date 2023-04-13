@@ -1,3 +1,5 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css'
+	
 @import 'base/variables'
 
 @import 'blocks/nav'
@@ -10,7 +12,10 @@
 @import 'blocks/price'
 @import 'blocks/footer'
 @import 'blocks/modal'
-	
+
+*
+	box-sizing: border-box
+
 body
 	font-family: 'Roboto', sans serif
 	margin: 0
@@ -25,3 +30,23 @@ body
 
 .hide
 	display: none
+
+@media (max-width: 1199px)
+	.container
+		max-width: 960px
+	
+
+@media (max-width: 991px)
+	.container
+		max-width: 720px
+	
+
+@media (max-width: 767px)
+	.container
+		max-width: 540px
+
+
+@media (max-width: 575px)
+	.container
+		width: 100%
+		padding: 0 10px
