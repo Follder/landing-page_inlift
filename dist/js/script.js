@@ -8,6 +8,54 @@ const slider = tns({
   }); */
 
   window.addEventListener('DOMContentLoaded', () => {
+    // smooth scroll and pageup
+
+    const links = document.querySelectorAll('a[href^="#"');
+    
+    for (const link of links) {
+        link.addEventListener("click", clickHandler);
+    }
+    function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        console.dir(href);
+        const offsetTop = document.querySelector(href).offsetTop;
+        scroll({
+        top: offsetTop,
+        behavior: "smooth"
+        });
+    }
+
+    // modal
+    const modalTrigger = document.querySelectorAll('[data-modal]'),
+        modal = document.querySelector('.modal');
+
+        modalTrigger.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            const target = e.target;
+
+            if (target.classList.contains('modal') || target.classList.contains('modal__close')) {
+                closeModal();
+            }
+
+        });
+
+        function openModal() {
+            modal.classList.remove('hide');
+            modal.classList.add('show', 'fade');
+        }
+
+        function closeModal() {
+            modal.classList.remove('show', 'fade');
+            modal.classList.add('hide');
+        }
+
     // mobile-menu
     const burger = document.querySelector('.burger'),
         mobileMenu = document.querySelector('.nav__list-mobile');

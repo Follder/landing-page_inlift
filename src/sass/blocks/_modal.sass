@@ -28,6 +28,7 @@
     &__close
         font-size: 2rem
         line-height: 1
+        cursor: pointer
     &__body
         display: flex
         flex-direction: column
@@ -38,7 +39,7 @@
             font-weight: 800
             color: $header-color
         input
-            height: 25px
+            height: 35px
             padding: 0.33em 0.75em
             border: 1px solid #e3e3e3
             -webkit-transition: all .2s linear
@@ -52,6 +53,14 @@
             height: 100px
             resize: none
             border: 1px solid #e3e3e3
+            padding: 10px
     &__btn
         width: auto
         margin-top: 15px
+
+@media (max-width: 575px)
+    .modal
+        &__dialog
+            max-width: 325px
+        &__body-content
+            text-align: center

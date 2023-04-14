@@ -1,7 +1,7 @@
 .benefits
 	&__wrapper
 		display: grid
-		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+		grid-template-columns: repeat(auto-fit, minmax(420px, 1fr))
 		grid-template-rows: repeat(2, 1fr)
 		grid-auto-rows: auto
 		gap: 50px
@@ -18,3 +18,8 @@
 		&-descr
 			line-height: 1.6
 			color: $header-color
+
+@media (max-width: 767px)
+	.benefits
+		&__wrapper
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))

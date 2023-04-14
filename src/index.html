@@ -38,10 +38,10 @@
       <a href="#" class="nav__link"><img src="img/logo-color.svg" alt="img"></a>
       <ul class="nav__list">
         <li class="nav__list-item">
-          <a href="#">Прайс лист</a>
+          <a href="#price">Прайс лист</a>
         </li>
         <li class="nav__list-item">
-          <a href="#">Формат</a>
+          <a href="#format">Формат</a>
         </li>
         <li class="nav__list-item">
           <a href="#">Мапа</a>
@@ -51,9 +51,9 @@
         </li>
       </ul>
       <ul class="nav__list-mobile">
-        <li class="nav__list-mobile-item"><a href="№">Прайс лист</a></li>
-        <li class="nav__list-mobile-item"><a href="№">Формат</a></li>
-        <li class="nav__list-mobile-item"><a href="№">Мапа</a></li>
+        <li class="nav__list-mobile-item"><a href="#price">Прайс лист</a></li>
+        <li class="nav__list-mobile-item"><a href="#format">Формат</a></li>
+        <li class="nav__list-mobile-item"><a href="#">Мапа</a></li>
         <li class="nav__list-mobile-item"><a href="tel:+380736429060">+38 (073) 642 90 60</a></li>
       </ul>
       <div class="burger">
@@ -69,7 +69,7 @@
         <h1 class="title promo__title promo_mt100">Реклама в ліфтах міста Коломия</h1>
         <div class="promo__descr">Залучайте нових клієнтів за допомогою реклами в 50 ліфтах,
           що знаходяться у всіх спальних районах</div>
-        <a href="#" class="btn btn_mt25">Замовити</a>
+        <a href="#" data-modal class="btn btn_mt25">Замовити</a>
       </div>
     </div>
   </section>
@@ -114,7 +114,7 @@
       </div>
     </div>
   </section>
-  <section class="format">
+  <section class="format" id="format">
     <h2 class="title">Формат та розміщення</h2>
     <div class="container">
       <div class="format__wrapper">
@@ -133,7 +133,7 @@
       </div>
     </div>
   </section>
-  <section class="price">
+  <section class="price" id="price">
     <h2 class="title price__title">Прайс-лист</h2>
     <div class="container">
       <div class="price__wrapper">
@@ -172,7 +172,7 @@
         <div class="footer__promo">
           <img src="img/logo-white.svg" alt="logo-white">
           <div class="footer__promo-descr">Рушійна сила вашого бізнесу</div>
-          <a href="#" class="btn footer__promo-btn">замовити</a>
+          <a href="#" data-modal class="btn footer__promo-btn">замовити</a>
         </div>
         <div class="footer__info">
           <div class="footer__links">
@@ -192,34 +192,34 @@
     <div class="private-policy">© 2020 Всі права захищені</div>
   </footer>
 
-  <div class="modal hide" data-modal>
-    <form action="">
+  <div class="modal hide">
       <div class="modal__dialog">
-        <div class="modal__content">
-          <div class="modal__header">
-            <div class="modal__title">Оформити замовлення</div>
-            <div class="modal__close">&times;</div>
+        <form action="telegram.php" method="POST">
+          <div class="modal__content">
+            <div class="modal__header">
+              <div class="modal__title">Оформити замовлення</div>
+              <div class="modal__close">&times;</div>
+            </div>
+            <div class="modal__body">
+              <div class="modal__body-content">Ми з вами зв'яжемося для уточнення всіх деталей</div>
+              <label for="name">Прізвище та Ім'я</label>
+              <input type="text" name="user_name" id="name" required>
+              
+              <label for="phone">Номер телефону з кодом країни</label>
+              <input type="tel" name="user_phone" id="phone" minlength="10" placeholder="+380" required>
+              
+              <label for="email">Електронна адреса</label>
+              <input type="email" name="user_email" id="email">
+  
+              <label for="text">Період замовлення та побажання</label>
+              <textarea name="user_text" id="text"></textarea>
+            </div>
+            <div class="modal__footer">
+              <button type="submit" class="btn modal__btn">замовити</button>
+            </div>
           </div>
-          <div class="modal__body">
-            <div class="modal__body-content">Ми з вами зв'яжемося для уточнення всіх деталей</div>
-            <label for="name">Прізвище та Ім'я</label>
-            <input type="text" name="user_name" id="name">
-            
-            <label for="phone">Номер телефону з кодом країни</label>
-            <input type="tel" name="user_phone" id="phone" placeholder="+380">
-            
-            <label for="email">Електронна адреса</label>
-            <input type="email" name="user_email" id="email">
-
-            <label for="text">Період замовлення та побажання</label>
-            <textarea name="user_text" id="text"></textarea>
-          </div>
-          <div class="modal__footer">
-            <button type="submit" class="btn modal__btn">замовити</button>
-          </div>
-        </div>
+        </form>
       </div>
-    </form>
   </div>
 
 <script src="js/script.js"></script>
