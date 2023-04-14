@@ -1,15 +1,41 @@
-/* import { tns } from "./node_modules/tiny-slider/src/tiny-slider";
-
-const slider = tns({
-    container: '.my-slider',
-    items: 3,
-    slideBy: 'page',
-    autoplay: true
-  }); */
 
   window.addEventListener('DOMContentLoaded', () => {
-    // smooth scroll and pageup
 
+    tns({
+        container: '.slider',
+        mode: 'carousel',
+        items: 1,
+        responsive: {
+            325: {
+                edgePadding: 20,
+                gutter: 20,
+                items: 1
+              },
+            640: {
+              edgePadding: 0,
+              gutter: 20,
+              items: 2
+            },
+            700: {
+              gutter: 30
+            },
+            900: {
+              items: 3
+            }
+          },
+        slideBy: 'page',
+        autoplay: true,
+        center: false,
+        controls: false,
+        mouseDrag: true,
+        swipeAngle: false,
+        speed: 400,
+        nav: false,
+        autoplayHoverPause: true,
+        autoplayButtonOutput: false,
+      });
+
+    // smooth scroll and pageup
     const links = document.querySelectorAll('a[href^="#"');
     
     for (const link of links) {
