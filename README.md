@@ -5,8 +5,8 @@ For Demo this project you can use [DEMO LINK](https://inlift.com.ua/)
 
 ## Project timeline
 
-This commercial project was created by order of the advertising agency Inlift with the aim of attracting new customers and optimizing communication with customers, namely:
-- Current price list
+This commercial project was created by order of the advertising agency "Inlift" with the aim of attracting new customers and optimizing communication with customers, namely:
+- Show current price list
 - An order form that sends a request to Telegram
 
 ## Technologies Used
